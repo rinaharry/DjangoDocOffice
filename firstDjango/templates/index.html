@@ -1,0 +1,7 @@
+<ul>
+    {% for list in latest_question_list %}
+   <li>
+       <a href="{% url 'firstdjango:detail' list.id %}">{{list.question_text}}</a>
+   </li>
+    {% endfor%}
+</ul>

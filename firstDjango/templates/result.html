@@ -1,0 +1,7 @@
+<h1>{{question}}</h1>
+<ul>
+    {% for q in question.choice_set.all %}
+       <li>{{q.choice_text}}-{{q.vote}}</li>
+    {% endfor %}   
+</ul>
+<a href="{% url 'firstdjango:detail' question.id %}">try again </a>
